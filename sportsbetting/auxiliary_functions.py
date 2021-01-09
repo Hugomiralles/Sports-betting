@@ -11,15 +11,15 @@ import itertools
 import math
 import re
 import time
-import sportsbetting
-from sportsbetting.database_functions import (get_formatted_name, is_in_db_site, is_in_db,
+import sports_betting.sportsbetting
+from sports_betting.sportsbetting.database_functions import (get_formatted_name, is_in_db_site, is_in_db,
                                               get_close_name, add_name_to_db,
                                               get_id_by_site, get_id_by_opponent, get_close_name2,
                                               get_close_name3, get_double_team_tennis,
                                               get_id_by_opponent_thesportsdb, get_competition_id,
                                               is_matching_next_match, get_time_next_match)
 
-from sportsbetting.basic_functions import cotes_combine, cotes_freebet, mises2, mises, gain2
+from sports_betting.sportsbetting.basic_functions import cotes_combine, cotes_freebet, mises2, mises, gain2
 
 
 def valid_odds(all_odds, sport):

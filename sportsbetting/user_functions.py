@@ -25,19 +25,19 @@ import unidecode
 import urllib3
 from bs4 import BeautifulSoup
 from multiprocessing.pool import ThreadPool
-import sportsbetting
-from sportsbetting import selenium_init
-from sportsbetting.database_functions import (get_id_formatted_competition_name, get_competition_by_id, import_teams_by_url,
+import sports_betting.sportsbetting as sportsbetting
+from sports_betting.sportsbetting import selenium_init
+from sports_betting.sportsbetting.database_functions import (get_id_formatted_competition_name, get_competition_by_id, import_teams_by_url,
                                               import_teams_by_sport, import_teams_by_competition_id_thesportsdb)
-from sportsbetting.parser_functions import parse
-from sportsbetting.auxiliary_functions import (valid_odds, format_team_names, merge_dict_odds, afficher_mises_combine,
+from sports_betting.sportsbetting.parser_functions import parse
+from sports_betting.sportsbetting.auxiliary_functions import (valid_odds, format_team_names, merge_dict_odds, afficher_mises_combine,
                                                cotes_combine_all_sites, defined_bets, binomial, best_match_base,
                                                filter_dict_dates, get_nb_issues, best_combine_reduit, filter_dict_minimum_odd)
-from sportsbetting.basic_functions import (gain2, mises2, gain, mises, mises_freebet, cotes_freebet,
+from sports_betting.sportsbetting.basic_functions import (gain2, mises2, gain, mises, mises_freebet, cotes_freebet,
                                            gain_pari_rembourse_si_perdant, gain_freebet2, mises_freebet2,
                                            mises_pari_rembourse_si_perdant, gain_promo_gain_cote, mises_promo_gain_cote,
                                            gain_gains_nets_boostes, mises_gains_nets_boostes, gain3, mises3)
-from sportsbetting.lambda_functions import get_best_odds, get_profit
+from sports_betting.sportsbetting.lambda_functions import get_best_odds, get_profit
 
 
 def parse_competition(competition, sport="football", *sites):
@@ -92,6 +92,7 @@ def parse_competition(competition, sport="football", *sites):
     out = valid_odds(merge_dict_odds(res), sport)
     if inspect.currentframe().f_back.f_code.co_name != "<module>":
         return out
+    return out
 
 
 def parse_competitions_site(competitions, sport, site):

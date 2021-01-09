@@ -9,7 +9,7 @@ import selenium.common
 import stopit
 import termcolor
 
-import sportsbetting
+import sports_betting.sportsbetting
 
 DRIVER = {}
 

@@ -21,9 +21,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from bs4 import BeautifulSoup
 
-import sportsbetting
-from sportsbetting import selenium_init
-from sportsbetting.auxiliary_functions import (merge_dicts, reverse_match_odds,
+import sports_betting.sportsbetting as sportsbetting
+from sports_betting.sportsbetting import selenium_init
+from sports_betting.sportsbetting.auxiliary_functions import (merge_dicts, reverse_match_odds,
                                                scroll, format_bwin_names,
                                                format_bwin_time,
                                                format_joa_time,

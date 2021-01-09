@@ -1,4 +1,4 @@
-from sportsbetting.basic_functions import gain, gain2
+from sports_betting.sportsbetting.basic_functions import gain, gain2
 
 
 def get_best_odds(one_site):

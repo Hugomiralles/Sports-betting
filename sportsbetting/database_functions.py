@@ -14,9 +14,9 @@ import datetime
 import re
 import unidecode
 from bs4 import BeautifulSoup
-import sportsbetting
+import sports_betting.sportsbetting
 
-PATH_DB = os.path.dirname(sportsbetting.__file__) + "/resources/teams.db"
+PATH_DB = os.path.dirname(sports_betting.sportsbetting.__file__) + "/resources/teams.db"
 
 
 def get_id_formatted_competition_name(competition, sport):
